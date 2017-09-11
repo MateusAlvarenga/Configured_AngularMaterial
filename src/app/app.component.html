@@ -1,5 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+<md-toolbar>  {{title}} </md-toolbar>
 <button md-button>Click me!</button><br>
+<md-slider thumbLabel tickInterval="1"></md-slider>
+
+
+
+
+<form>
+  <md-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+    <md-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </md-option>
+  </md-select>
+
+  <p> Selected value: {{selectedValue}} </p>
+</form>
 
